@@ -6,13 +6,15 @@ import './assets/styles/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import HomeScreen from './screens/HomeScreen';
+import ProductScreen from './screens/ProductScreen';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route index element={<HomeScreen />} />
+          <Route index={true} element={<HomeScreen />} />
+          <Route path='/product/:id' element={<ProductScreen />} />
         </Route>
       </Routes>
     </Router>
